@@ -60,3 +60,8 @@ a {
 .yc-menu__list-item {
   color: #fff;
 }
+
+* {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
