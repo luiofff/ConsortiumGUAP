@@ -65,3 +65,12 @@ a {
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
 }
+
+.yc-popup {
+  transition: .5s;
+  border: 1px solid rgba(20, 71, 251, 1);
+  background: #000;
+
+  border-radius: 1.2rem;
+  padding: .5rem;
+}
