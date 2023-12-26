@@ -5,7 +5,7 @@ import sputnik from '../../public/sputnik.svg'
 export default function TitleBlock() {
     return (
         <>
-            <div className='w-full h-56 grid place-items-center '>
+            <div className='w-full h-72 grid place-items-center '>
                 <div className='flex flex-col gap-7 text-5xl font-bold'>
                     <h1 className='text-white text-4xl sm:text-5xl'>Консорциум -</h1>
                     <div className='flex gap-4 items-center'>
