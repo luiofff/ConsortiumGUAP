@@ -45,65 +45,41 @@
     border-radius: 50%;
   }
   
-  .discord-button:hover {
-    background: #5865F2;
-  }
+
   
   .buttons:hover .discord-button {
     translate: 70px 0px;
   }
   
-  .twitter-button:hover {
-    background: #1CA1F1;
-  }
   
   .buttons:hover .twitter-button {
     translate: 47px -47px;
   }
   
-  .reddit-button:hover {
-    background: #FF4500;
-  }
-  
   .buttons:hover .reddit-button {
     translate: 0px -70px;
   }
-  
-  .messenger-button:hover {
-    background: #0093FF;
-  }
+
   
   .buttons:hover .messenger-button {
     translate: -47px -47px;
   }
   
-  .pinterest-button:hover {
-    background: #F0002A;
-  }
   
   .buttons:hover .pinterest-button {
     translate: -70px 0px;
   }
   
-  .instagram-button:hover {
-    background: #F914AF;
-  }
   
   .buttons:hover .instagram-button {
     translate: -47px 47px;
   }
   
-  .snapchat-button:hover {
-    background: #FFFC00;
-  }
   
   .buttons:hover .snapchat-button {
     translate: 0px 70px;
   }
   
-  .whatsapp-button:hover {
-    background: #25D366;
-  }
   
   .buttons:hover .whatsapp-button {
     translate: 47px 47px;
@@ -134,3 +110,7 @@
   }
 
  
+
+  .ico {
+    property: 50px;
+  }
