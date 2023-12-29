@@ -47,42 +47,42 @@
   
 
   
-  .buttons:hover .discord-button {
-    translate: 70px 0px;
+  .buttons:hover .east-button {
+    translate: 80px 0px;
   }
   
   
-  .buttons:hover .twitter-button {
-    translate: 47px -47px;
+  .buttons:hover .north_east-button {
+    translate: 57px -57px;
   }
   
-  .buttons:hover .reddit-button {
-    translate: 0px -70px;
+  .buttons:hover .north-button {
+    translate: 0px -80px;
   }
 
   
-  .buttons:hover .messenger-button {
-    translate: -47px -47px;
+  .buttons:hover .north_west-button {
+    translate: -57px -57px;
   }
   
   
-  .buttons:hover .pinterest-button {
-    translate: -70px 0px;
+  .buttons:hover .west-button {
+    translate: -80px 0px;
   }
   
   
-  .buttons:hover .instagram-button {
-    translate: -47px 47px;
+  .buttons:hover .west_south-button {
+    translate: -57px 57px;
   }
   
   
-  .buttons:hover .snapchat-button {
-    translate: 0px 70px;
+  .buttons:hover .south-button {
+    translate: 0px 80px;
   }
   
   
-  .buttons:hover .whatsapp-button {
-    translate: 47px 47px;
+  .buttons:hover .south_east-button {
+    translate: 57px 57px;
   }
 
   .btn_block {

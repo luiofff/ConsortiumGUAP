@@ -10,8 +10,13 @@ import Button from './ui/button/button'
 
 
 const compButtonsArray = [
-  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'twitter-button' },
-  { icon: 'yand', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'discord-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north_east-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north_west-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'west-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'west_south-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'south-button' },
+  { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'south_east-button' },
 ];
 
 export default function Home() {
