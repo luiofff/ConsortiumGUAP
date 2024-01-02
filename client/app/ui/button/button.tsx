@@ -14,9 +14,10 @@ interface ButtonProps {
       transitionDelay: string;
       countBtn: string;
     }>;
+    title: string;
   }
 
-export default function Button({ companyButtons }: ButtonProps) {
+export default function Button({ companyButtons, title }: ButtonProps) {
     return (
         <>
             <div className={styles.btn_block}>
@@ -48,7 +49,7 @@ export default function Button({ companyButtons }: ButtonProps) {
                     }
                 </div>
                 <div className={styles.text_block}>
-                    <span className={styles.btn__title}>Лаборатория технологического предпринимательства</span>
+                    <span className={styles.btn__title}>{title}</span>
                 </div>
             </div>  
         </>

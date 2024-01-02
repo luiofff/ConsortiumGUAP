@@ -6,20 +6,20 @@
     width: fit-content;
     transition: 0.3s;
     border-radius: 50%;
-  }
+ }
 
   .main-button {
-    position: fixed;
     display: grid;
     place-items: center;
-    padding: 10px;
     border: none;
+
+    width: 60px;
+    height: 60px;
     background: rgba(217, 217, 217);
     border-radius: 50%;
     transition: 0.2s;
     z-index: 100;
-
-  }
+}
 
   .button_logo {
     transition: all 0.5s ease;
@@ -109,8 +109,3 @@
     
   }
 
- 
-
-  .ico {
-    property: 50px;
-  }
