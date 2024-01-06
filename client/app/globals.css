@@ -29,12 +29,7 @@ footer, header, hgroup, menu, nav, section {
 html {
 	height: 100%;
 }
-body {
-	line-height: 1;
-  	background-attachment:fixed;
-  	background-repeat: no-repeat;
- 	background: linear-gradient(72deg, #000 -72.29%, #000 18.51%, #1447FB 113.17%);
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -76,9 +71,11 @@ a {
 }
 
 
-.starSpace_ {
-	position: absolute;
-	height: auto;
-	width: 100%;
-	background-color: red;
+body {
+	line-height: 1;
+	background-attachment: fixed !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background: linear-gradient(72deg, #000 -72.29%, #000 18.51%, #1447FB 113.17%);
 }
