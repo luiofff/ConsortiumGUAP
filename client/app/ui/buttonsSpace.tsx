@@ -2,67 +2,67 @@
 
 import Button from "./button/button";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from 'react';
 
 const compButtonsArray = [
     [
-        { icon: 'gaz', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'north-button' },
-        { icon: 'uiniversitu2035', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north_east-button' },
-        { icon: 'yand', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'north_west-button' },
-        { icon: 'megafon', label: 'Label 2', transitionDelay: '0.4s', countBtn: 'west-button' },
-        { icon: 'kirov_zavod', label: 'Label 2', transitionDelay: '0s', countBtn: 'east-button' }
+        { icon: 'gaz', transitionDelay: '0.2s', countBtn: 'north-button' },
+        { icon: 'uiniversitu2035', transitionDelay: '0.1s', countBtn: 'north_east-button' },
+        { icon: 'yand', transitionDelay: '0.3s', countBtn: 'north_west-button' },
+        { icon: 'megafon', transitionDelay: '0.4s', countBtn: 'west-button' },
+        { icon: 'kirov_zavod', transitionDelay: '0s', countBtn: 'east-button' }
     ],
     [
-        { icon: 'megafon', label: 'Label 2', transitionDelay: '0s', countBtn: 'north_west-button' },
-        { icon: 'ptc', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north-button' },
-        { icon: 'ublox', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'north_east-button' },
-        { icon: 'beza', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'east-button' }
+        { icon: 'megafon', transitionDelay: '0s', countBtn: 'north_west-button' },
+        { icon: 'ptc', transitionDelay: '0.1s', countBtn: 'north-button' },
+        { icon: 'ublox', transitionDelay: '0.2s', countBtn: 'north_east-button' },
+        { icon: 'beza', transitionDelay: '0.3s', countBtn: 'east-button' }
     ],
     [
-        { icon: 'kuka', label: 'Label 2', transitionDelay: '0s', countBtn: 'north_west-button' },
-        { icon: 'ni', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north-button' },
+        { icon: 'kuka', transitionDelay: '0s', countBtn: 'north_west-button' },
+        { icon: 'ni', transitionDelay: '0.1s', countBtn: 'north-button' },
     ],
     [
-        { icon: 'coex', label: 'Label 2', transitionDelay: '0s', countBtn: 'north-button' },
-        { icon: 'fixar', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north_east-button' },
+        { icon: 'coex', transitionDelay: '0s', countBtn: 'north-button' },
+        { icon: 'fixar', transitionDelay: '0.1s', countBtn: 'north_east-button' },
     ],
     [
-        { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'west_south-button' },
-        { icon: 'granit', label: 'Label 2', transitionDelay: '0s', countBtn: 'west-button' },
-        { icon: 'samsungIT', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'south-button' },
-        { icon: 'cloud', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'south_east-button' }
+        { icon: 'gaz', transitionDelay: '0.1s', countBtn: 'west_south-button' },
+        { icon: 'granit', transitionDelay: '0s', countBtn: 'west-button' },
+        { icon: 'samsungIT', transitionDelay: '0.2s', countBtn: 'south-button' },
+        { icon: 'cloud', transitionDelay: '0.3s', countBtn: 'south_east-button' }
     ],
     [
-        { icon: 'mgbot', label: 'Label 2', transitionDelay: '0s', countBtn: 'north_east-button' },
-        { icon: 'spb', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'north-button' },
-        { icon: 'volts', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'north_west-button' },
-        { icon: 'infotecs', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'west-button' },
-        { icon: 'nppkt', label: 'Label 2', transitionDelay: '0.4s', countBtn: 'west_south-button' }
+        { icon: 'mgbot', transitionDelay: '0s', countBtn: 'north_east-button' },
+        { icon: 'spb', transitionDelay: '0.1s', countBtn: 'north-button' },
+        { icon: 'volts', transitionDelay: '0.2s', countBtn: 'north_west-button' },
+        { icon: 'infotecs', transitionDelay: '0.3s', countBtn: 'west-button' },
+        { icon: 'nppkt', transitionDelay: '0.4s', countBtn: 'west_south-button' }
     ],
     [
-        { icon: 'mars', label: 'Label 2', transitionDelay: '0s', countBtn: 'north_east-button' },
-        { icon: 'kirov_zavod', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'east-button' },
-        { icon: 'yand', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'south_east-button' }
+        { icon: 'mars', transitionDelay: '0s', countBtn: 'north_east-button' },
+        { icon: 'kirov_zavod', transitionDelay: '0.1s', countBtn: 'east-button' },
+        { icon: 'yand', transitionDelay: '0.2s', countBtn: 'south_east-button' }
     ],
     [
-        { icon: 'spbficran', label: 'Label 2', transitionDelay: '0s', countBtn: 'west-button' },
+        { icon: 'spbficran', transitionDelay: '0s', countBtn: 'west-button' },
     ],
     [
-        { icon: 'gaz', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'east-button' },
-        { icon: 'uiniversitu2035', label: 'Label 2', transitionDelay: '0s', countBtn: 'south_east-button' },
-        { icon: 'yand', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'north_east-button' },
-        { icon: 'megafon', label: 'Label 2', transitionDelay: '0.4s', countBtn: 'north_west-button' },
-        { icon: 'kirov_zavod', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'north-button' }
+        { icon: 'gaz', transitionDelay: '0.1s', countBtn: 'east-button' },
+        { icon: 'uiniversitu2035', transitionDelay: '0s', countBtn: 'south_east-button' },
+        { icon: 'yand', transitionDelay: '0.2s', countBtn: 'north_east-button' },
+        { icon: 'megafon', transitionDelay: '0.4s', countBtn: 'north_west-button' },
+        { icon: 'kirov_zavod', transitionDelay: '0.3s', countBtn: 'north-button' }
     ],
     [
-        { icon: 'silmash', label: 'Label 2', transitionDelay: '0s', countBtn: 'west-button' },
+        { icon: 'silmash', transitionDelay: '0s', countBtn: 'north-button' },
     ],
     [
-        { icon: 'gaz', label: 'Label 2', transitionDelay: '0.3s', countBtn: 'south-button' },
-        { icon: 'uiniversitu2035', label: 'Label 2', transitionDelay: '0.4s', countBtn: 'south_east-button' },
-        { icon: 'yand', label: 'Label 2', transitionDelay: '0s', countBtn: 'north_west-button' },
-        { icon: 'megafon', label: 'Label 2', transitionDelay: '0.1s', countBtn: 'west-button' },
-        { icon: 'kirov_zavod', label: 'Label 2', transitionDelay: '0.2s', countBtn: 'west_south-button' }
+        { icon: 'gaz', transitionDelay: '0.3s', countBtn: 'south-button' },
+        { icon: 'uiniversitu2035', transitionDelay: '0.4s', countBtn: 'south_east-button' },
+        { icon: 'yand', transitionDelay: '0s', countBtn: 'north_west-button' },
+        { icon: 'megafon', transitionDelay: '0.1s', countBtn: 'west-button' },
+        { icon: 'kirov_zavod', transitionDelay: '0.2s', countBtn: 'west_south-button' }
     ],
 ];
 
@@ -143,30 +143,30 @@ const Planet = () => {
 }
 
 const StarSpace = () => {
-    const numberOfStars = 12;
+    const numberOfStars = 14;
     const numberOfShips = 3;
     
 
     const stars = Array.from({ length: numberOfStars }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1500, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}>
+        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}>
             <Star />
         </div>
     ));
 
     const glares = Array.from({ length: numberOfStars }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1500, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Glare /></div>
+        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Glare /></div>
     ));
 
     const ships = Array.from({ length: numberOfShips }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1500, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><SpaceShip /></div>
+        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><SpaceShip /></div>
     ));
 
     const sputnik = Array.from({ length: 2 }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1500, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Sputnik /></div>
+        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Sputnik /></div>
     ));
 
     const planet = Array.from({ length: 2 }).map((_, index) => (
-        <div key={index} className="absolute" style={{top:Math.random() * 1500, left: Math.random() * window.innerWidth-50 }}><Planet /></div>
+        <div key={index} className="absolute" style={{top:Math.random() * 1580, left: Math.random() * window.innerWidth-50 }}><Planet /></div>
     ));
 
 
@@ -182,46 +182,102 @@ const StarSpace = () => {
     );
 };
 
+interface LineProps {
+    startId: string;
+    endId: string;
+}
+
+const Line: React.FC<LineProps> = ({ startId, endId }) => {
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  
+    useEffect(() => {
+      if (!canvasRef.current) return;
+  
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+  
+      if (!ctx) return;
+  
+      const startElement = document.getElementById(startId);
+      const endElement = document.getElementById(endId);
+  
+      if (!startElement || !endElement) return;
+  
+      const startRect = startElement.getBoundingClientRect();
+      const endRect = endElement.getBoundingClientRect();
+
+      console.log(startRect)
+  
+      const startX = startRect.left + startRect.width / 2 + window.scrollX;
+      const startY = startRect.top + startRect.height / 2 + window.scrollY;
+      const endX = endRect.left + endRect.width / 2 + window.scrollX;
+      const endY = endRect.top + endRect.height / 2 + window.scrollY;
+  
+      canvas.width = document.body.scrollWidth;
+      canvas.height = document.body.scrollHeight;
+  
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.lineTo(endX, endY);
+
+      ctx.strokeStyle = 'white';
+      ctx.stroke();
+    }, [startId, endId]);
+  
+    return <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0 }} />;
+  };
+
+
+
+
 export default function ButtonsSpace() {
+    const elements = ["1", "2", "2", "3", "3", "4", "4", "5", "5", "6", "6", "7", "7", "8", "8", "9", "9", "10", "10", "11"];
 
-
-  return (
-    <div className="flex flex-col pt-20 ">
-        
-      <div className="flex pl-20">
-        <Button companyButtons={compButtonsArray[0]} title="Лаборатория технологического предпринимательства"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[1]} title="Лаборатория интернета вещей"/>
-      </div>
-      <div className="flex pl-20">
-        <Button companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[3]} title="Лаборатория беспилотных авиационных систем"/>
-      </div>
-      <div className="flex pl-20">
-        <Button companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[6]} title="Лаборатория электроэнергетики"/>
-      </div>
-      <div className="flex pl-20">
-        <Button companyButtons={compButtonsArray[7]} title="Отдел Инженерный гараж"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[8]} title="Лаборатория автоматизации технологических процессов"/>
-      </div>
-      <div className="flex pl-20">
-        <Button companyButtons={compButtonsArray[9]} title="Студенческое конструкторское бюро 'Силовые машины ГУАП'"/>
-      </div>
-      <div className="flex pr-20 flex-row-reverse relative">
-        <Button companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
-      </div>
-      <StarSpace />
-    </div>
-  );
+    const renderLines = () => {
+        const lines = [];
+        for (let i = 0; i < elements.length - 1; i++) {
+        lines.push(<Line key={`line-${i}`} startId={elements[i]} endId={elements[i + 1]} />);
+        }
+        return lines;
+    };
+    return (
+        <div className="flex flex-col pt-20 ">
+            
+        <div className="flex pl-20 sm: pl-28">
+            <Button elem="1"companyButtons={compButtonsArray[0]} title="Лаборатория технологического предпринимательства"/>
+        </div>
+        <div className="flex pr-20 flex-row-reverse relative sm:pr-28">
+            <Button  elem="2" companyButtons={compButtonsArray[1]} title="Лаборатория интернета вещей"/>
+        </div>
+        <div className="flex pl-96 sm:pl-28">
+            <Button elem="3" companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
+        </div>
+        <div className="flex pr-36 pt-10  flex-row-reverse relative">
+            <Button elem="4" companyButtons={compButtonsArray[3]} title="Лаборатория беспилотных авиационных систем"/>
+        </div>
+        <div className="flex pl-36">
+            <Button elem="5" companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
+        </div>
+        <div className="flex pr-60 flex-row-reverse relative">
+            <Button elem="6" companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
+        </div>
+        <div className="flex pr-20 pt-20 flex-row-reverse relative sm: pr-28">
+            <Button elem="7" companyButtons={compButtonsArray[6]} title="Лаборатория электроэнергетики"/>
+        </div>
+        <div className="flex pl-20">
+            <Button elem="8" companyButtons={compButtonsArray[7]} title="Отдел Инженерный гараж"/>
+        </div>
+        <div className="flex pr-96 flex-row-reverse relative sm:pr-28">
+            <Button elem="9" companyButtons={compButtonsArray[8]} title="Лаборатория автоматизации технологических процессов"/>
+        </div>
+        <div className="flex flex-row-reverse relative sm:pr-28">
+            <Button elem="10" companyButtons={compButtonsArray[9]} title="Студенческое конструкторское бюро 'Силовые машины ГУАП'"/>
+        </div>
+        <div className="flex pr-20 pb-10 justify-center relative">
+            <Button elem="11" companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
+        </div>
+        <StarSpace />
+        {renderLines()}
+        </div>
+    );
 }

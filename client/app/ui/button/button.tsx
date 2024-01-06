@@ -3,27 +3,28 @@
 import styles from "./button.module.css";
 import clsx from 'clsx';
 import Image from 'next/image';
-import ImageShow from "./image";
-import React, { useState } from "react";
+import React from "react";
 import CompanyLogo from "./image";
 
 interface ButtonProps {
     companyButtons: Array<{
       icon: string;
-      label: string;
       transitionDelay: string;
       countBtn: string;
     }>;
     title: string;
+    elem: string;
 }
 
-export default function Button({ companyButtons, title }: ButtonProps) {
+
+
+export default function Button({ companyButtons, title, elem }: ButtonProps) {
     
 
     return (
         <>
-            <div className={styles.btn_block}>
-                <div className={styles.buttons}>
+            <div  className={styles.btn_block}>
+                <div id={elem} className={styles.buttons}>
                     <button className={styles['main-button']}>
                         <Image
                             className={styles.button_logo}
