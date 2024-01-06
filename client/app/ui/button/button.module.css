@@ -6,7 +6,22 @@
     width: fit-content;
     transition: 0.3s;
     border-radius: 50%;
- }
+    z-index: 999;
+}
+
+.cliked_btn {
+  z-index: 999;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+  transition: 0.3s;
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  background-color: red;
+}
 
   .main-button {
     display: grid;

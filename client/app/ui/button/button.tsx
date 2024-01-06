@@ -1,10 +1,10 @@
 
+
 import styles from "./button.module.css";
 import clsx from 'clsx';
 import Image from 'next/image';
 import ImageShow from "./image";
-import React from "react";
-
+import React, { useState } from "react";
 import CompanyLogo from "./image";
 
 interface ButtonProps {
@@ -15,9 +15,11 @@ interface ButtonProps {
       countBtn: string;
     }>;
     title: string;
-  }
+}
 
 export default function Button({ companyButtons, title }: ButtonProps) {
+    
+
     return (
         <>
             <div className={styles.btn_block}>
