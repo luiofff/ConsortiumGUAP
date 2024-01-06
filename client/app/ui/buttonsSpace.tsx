@@ -252,13 +252,13 @@ export default function ButtonsSpace() {
         <div className="flex pl-96 sm:pl-28">
             <Button elem="3" companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
         </div>
-        <div className="flex pr-36 pt-10  flex-row-reverse relative">
+        <div className="flex pr-36 pt-16  flex-row-reverse relative">
             <Button elem="4" companyButtons={compButtonsArray[3]} title="Лаборатория беспилотных авиационных систем"/>
         </div>
-        <div className="flex pl-36">
+        <div className="flex pl-36 sm:pt-10">
             <Button elem="5" companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
         </div>
-        <div className="flex pr-60 flex-row-reverse relative">
+        <div className="flex pr-60  flex-row-reverse relative sm:pt-10">
             <Button elem="6" companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
         </div>
         <div className="flex pr-20 pt-20 flex-row-reverse relative sm: pr-28">
@@ -270,10 +270,10 @@ export default function ButtonsSpace() {
         <div className="flex pr-96 flex-row-reverse relative sm:pr-28">
             <Button elem="9" companyButtons={compButtonsArray[8]} title="Лаборатория автоматизации технологических процессов"/>
         </div>
-        <div className="flex flex-row-reverse relative sm:pr-28">
+        <div className="flex flex-row-reverse relative sm:pr-36 pt-16">
             <Button elem="10" companyButtons={compButtonsArray[9]} title="Студенческое конструкторское бюро 'Силовые машины ГУАП'"/>
         </div>
-        <div className="flex pr-20 pb-10 justify-center relative">
+        <div className="flex pr-20 pb-10 justify-center relative sm:pt-16">
             <Button elem="11" companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
         </div>
         <StarSpace />
