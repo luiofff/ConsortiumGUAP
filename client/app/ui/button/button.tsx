@@ -12,13 +12,18 @@ interface ButtonProps {
       transitionDelay: string;
       countBtn: string;
     }>;
+    projects: Array<{
+        left: string;
+        center: string;
+        rigth: string;
+    }>;
     title: string;
     elem: string;
 }
 
 
 
-export default function Button({ companyButtons, title, elem }: ButtonProps) {
+export default function Button({ companyButtons, title, elem, projects }: ButtonProps) {
     const [clicked, setClick] = React.useState(false);
     const fullBtnRef = React.useRef<HTMLDivElement>(null);
 
@@ -60,17 +65,22 @@ export default function Button({ companyButtons, title, elem }: ButtonProps) {
                                         }
                                     </div>
                                     <span style={{ color:"#fff" }}>Проекты</span>
-                                    <div className="flex gap-4 w-48 justify-center">
-                                        <div style={{ fontSize: "0.5rem", border: "2px solid #F92D77" }}  className="p-9  text-center grid place-items-center rounded-full border-2">
-                                            <span className="absolute text-center grid place-items-center w-20">мобильное приложение</span>
-                                        </div>
-                                        <div style={{ fontSize: "0.5rem", border: "2px solid #1546FA" }}  className="p-9  text-center grid place-items-center rounded-full">
-                                            <span className="absolute text-center grid place-items-center w-20">голосовой помощник</span>
-                                        </div>
-                                        <div style={{ fontSize: "0.5rem", border: "2px solid #15C1EC" }}  className="p-9  text-center grid place-items-center rounded-full">
-                                            <span className="absolute text-center grid place-items-center w-20">телеграмм-бот</span>
-                                        </div>
-                                    </div>
+                                    {
+                                        projects.map((project, index) => (
+                                            <div key={index} className="flex gap-4 w-48 justify-center">
+                                            <div style={{ fontSize: "0.5rem", border: "2px solid #F92D77" }} className="p-9 text-center grid place-items-center rounded-full border-2">
+                                                <span className="absolute text-center grid place-items-center w-20">{project.left}</span>
+                                            </div>
+                                            <div style={{ fontSize: "0.5rem", border: "2px solid #1546FA" }} className="p-9 text-center grid place-items-center rounded-full border-2">
+                                                <span className="absolute text-center grid place-items-center w-20">{project.center}</span>
+                                            </div>
+                                            <div style={{ fontSize: "0.5rem", border: "2px solid #15C1EC" }} className="p-9 text-center grid place-items-center rounded-full border-2">
+                                                <span className="absolute text-center grid place-items-center w-20">{project.rigth}</span>
+                                            </div>
+                                            </div>
+                                        ))
+                                    }
+                                    
                                     <button style={{ color:"#fff" }}>Подробнее →</button>
                                 </div>
                             </div>

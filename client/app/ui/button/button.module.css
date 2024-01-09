@@ -147,9 +147,8 @@
 
 .full_btn {
   position: absolute;
-  width: 24rem;
-  height: 24rem;
-  padding: 1.5rem;
+  width: 25rem;
+  height: 25rem;
 
   display: grid;
   place-items: center;

@@ -4,6 +4,12 @@ import Button from "./button/button";
 
 import React, { useEffect, useRef } from 'react';
 
+const projectsArray = [
+    [
+        {left: "Мобильное приложение", center: "Голосовой помощник", rigth: "Телеграмм-бот"}
+    ]
+]
+
 const compButtonsArray = [
     [
         { icon: 'gaz', transitionDelay: '0.2s', countBtn: 'north-button' },
@@ -224,7 +230,7 @@ const Line: React.FC<LineProps> = ({ startId, endId }) => {
       ctx.stroke();
     }, [startId, endId]);
   
-    return <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0 }} />;
+    return <canvas width={300} ref={canvasRef} style={{ position: 'absolute', top: 0, left: 0 }} />;
   };
 
 
@@ -243,38 +249,38 @@ export default function ButtonsSpace() {
     return (
         <div className="flex flex-col pt-20 ">
             
-        <div className="flex pl-20 sm: pl-28">
-            <Button elem="1"companyButtons={compButtonsArray[0]} title="Лаборатория технологического предпринимательства"/>
+        <div className="flex pl-32 sm: pl-28">
+            <Button projects={projectsArray[0]} elem="1"companyButtons={compButtonsArray[0]} title="Лаборатория технологического предпринимательства"/>
         </div>
-        <div className="flex pr-20 flex-row-reverse relative sm:pr-28">
-            <Button  elem="2" companyButtons={compButtonsArray[1]} title="Лаборатория интернета вещей"/>
+        <div className="flex pr-32 flex-row-reverse relative sm:pr-32">
+            <Button projects={projectsArray[0]}  elem="2" companyButtons={compButtonsArray[1]} title="Лаборатория интернета вещей"/>
         </div>
-        <div className="flex pl-96 sm:pl-28">
-            <Button elem="3" companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
+        <div className="flex pl-96 sm:pl-32">
+            <Button projects={projectsArray[0]} elem="3" companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
         </div>
         <div className="flex pr-36 pt-16  flex-row-reverse relative">
-            <Button elem="4" companyButtons={compButtonsArray[3]} title="Лаборатория беспилотных авиационных систем"/>
+            <Button projects={projectsArray[0]} elem="4" companyButtons={compButtonsArray[3]} title="Лаборатория беспилотных авиационных систем"/>
         </div>
         <div className="flex pl-36 sm:pt-10">
-            <Button elem="5" companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
+            <Button projects={projectsArray[0]} elem="5" companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
         </div>
-        <div className="flex pr-60  flex-row-reverse relative sm:pt-10">
-            <Button elem="6" companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
+        <div className="flex pr-64  flex-row-reverse relative sm:pt-10 pl-72">
+            <Button projects={projectsArray[0]} elem="6" companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
         </div>
-        <div className="flex pr-20 pt-20 flex-row-reverse relative sm: pr-28">
-            <Button elem="7" companyButtons={compButtonsArray[6]} title="Лаборатория электроэнергетики"/>
+        <div className="flex pr-32 pt-20 flex-row-reverse relative sm: pr-28">
+            <Button projects={projectsArray[0]} elem="7" companyButtons={compButtonsArray[6]} title="Лаборатория электроэнергетики"/>
         </div>
-        <div className="flex pl-20">
-            <Button elem="8" companyButtons={compButtonsArray[7]} title="Отдел Инженерный гараж"/>
+        <div className="flex pl-32">
+            <Button projects={projectsArray[0]} elem="8" companyButtons={compButtonsArray[7]} title="Отдел Инженерный гараж"/>
         </div>
-        <div className="flex pr-96 flex-row-reverse relative sm:pr-28">
-            <Button elem="9" companyButtons={compButtonsArray[8]} title="Лаборатория автоматизации технологических процессов"/>
+        <div className="flex pr-96 flex-row-reverse relative sm:pr-32">
+            <Button projects={projectsArray[0]} elem="9" companyButtons={compButtonsArray[8]} title="Лаборатория автоматизации технологических процессов"/>
         </div>
-        <div className="flex flex-row-reverse relative sm:pr-36 pt-16">
-            <Button elem="10" companyButtons={compButtonsArray[9]} title="Студенческое конструкторское бюро 'Силовые машины ГУАП'"/>
+        <div className="flex flex-row-reverse relative pr-32 sm:pr-36 pt-16">
+            <Button projects={projectsArray[0]} elem="10" companyButtons={compButtonsArray[9]} title="Студенческое конструкторское бюро 'Силовые машины ГУАП'"/>
         </div>
-        <div className="flex pr-20 pb-10 justify-center relative sm:pt-16">
-            <Button elem="11" companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
+        <div className="flex pr-20 pb-10 justify-center relative sm:pt-16 pl-16">
+            <Button projects={projectsArray[0]} elem="11" companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
         </div>
         <StarSpace />
         {renderLines()}
