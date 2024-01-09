@@ -1,3 +1,5 @@
+"use client"
+
 import styles from "./button.module.css";
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -17,41 +19,99 @@ interface ButtonProps {
 
 
 export default function Button({ companyButtons, title, elem }: ButtonProps) {
-    
+    const [clicked, setClick] = React.useState(false);
+    const fullBtnRef = React.useRef<HTMLDivElement>(null);
 
+    const handleClick = () => {
+      setClick(true);
+    };
+  
+    const handleClickOutside = (event: MouseEvent) => {
+      if (fullBtnRef.current && !fullBtnRef.current.contains(event.target as Node)) {
+        setClick(false);
+      }
+    };
+  
+    React.useEffect(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+  
     return (
         <>
-            <div  className={styles.btn_block}>
-                <div id={elem} className={styles.buttons}>
-                    <button className={styles['main-button']}>
-                        <Image
-                            className={styles.button_logo}
-                            src={require("../../../public/button_logo.svg")}
-                            alt="IS_logo"
-                            width={50}
-                            height={50}
-                            priority
-                        />
-                    </button>
-
-                    {
-                        companyButtons.map((button, index) => (
-                                <button
-                                    key={index}
-                                    className={clsx(styles[`${button.countBtn}`], styles.button)}
-                                    style={{ transitionDelay: `${button.transitionDelay}, ${button.transitionDelay}, ${button.transitionDelay}`, transitionProperty: 'translate, background, box-shadow' }}
-                                    >
-                                    <div className={styles.company_logo}>
-                                        <CompanyLogo company={button.icon} />
+            <div className={styles.btn_block}>
+                {
+                    clicked ? 
+                    (   
+                        <div id={elem} className="grid place-items-center">
+                            <div ref={fullBtnRef}  className={styles.full_btn}>
+                                <div className="flex flex-col gap-6 justify-center items-center">
+                                    <span style={{ color:"#fff"}} className="flex justify-center text-center w-24">{title}</span>
+                                    <span style={{ color:"#fff" }}>Партнеры</span>
+                                    <div  className="flex gap-4 justify-center">
+                                        {
+                                            companyButtons.map((button, index) => (
+                                                <CompanyLogo company={button.icon} />
+                                            )  
+                                        )
+                                        }
                                     </div>
-                                </button>
-                            )  
-                        )
-                    }
-                </div>
+                                    <span style={{ color:"#fff" }}>Проекты</span>
+                                    <div className="flex gap-4 w-48 justify-center">
+                                        <div style={{ fontSize: "0.5rem", border: "2px solid #F92D77" }}  className="p-9  text-center grid place-items-center rounded-full border-2">
+                                            <span className="absolute text-center grid place-items-center w-20">мобильное приложение</span>
+                                        </div>
+                                        <div style={{ fontSize: "0.5rem", border: "2px solid #1546FA" }}  className="p-9  text-center grid place-items-center rounded-full">
+                                            <span className="absolute text-center grid place-items-center w-20">голосовой помощник</span>
+                                        </div>
+                                        <div style={{ fontSize: "0.5rem", border: "2px solid #15C1EC" }}  className="p-9  text-center grid place-items-center rounded-full">
+                                            <span className="absolute text-center grid place-items-center w-20">телеграмм-бот</span>
+                                        </div>
+                                    </div>
+                                    <button style={{ color:"#fff" }}>Подробнее →</button>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                    :
+                    (
+                        <div id={elem} className={styles.buttons}>
+                            <button className={styles['main-button']} onClick={handleClick}>
+                                <Image
+                                    className={styles.button_logo}
+                                    src={require("../../../public/button_logo.svg")}
+                                    alt="IS_logo"
+                                    width={50}
+                                    height={50}
+                                    priority
+                                />
+                            </button>
+        
+                            {
+                                companyButtons.map((button, index) => (
+                                        <button
+                                            key={index}
+                                            className={clsx(styles[`${button.countBtn}`], styles.button)}
+                                            style={{ transitionDelay: `${button.transitionDelay}, ${button.transitionDelay}, ${button.transitionDelay}`, transitionProperty: 'translate, background, box-shadow' }}
+                                            >
+                                            <div className={styles.company_logo}>
+                                                <CompanyLogo company={button.icon} />
+                                            </div>
+                                        </button>
+                                    )  
+                                )
+                            }
+                        </div>
+                    )
+                }
                 <div className={styles.text_block}>
-                    <span className={styles.btn__title}>{title}</span>
+                    <span className={clsx(styles.btn__title, clicked && styles.close)}>{title}</span>
                 </div>
+
+                
             </div>  
         </>
     );
