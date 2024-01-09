@@ -264,7 +264,7 @@ export default function ButtonsSpace() {
         <div className="flex pl-36 sm:pt-10">
             <Button projects={projectsArray[0]} elem="5" companyButtons={compButtonsArray[4]} title="Лаборатория искусственного интеллекта"/>
         </div>
-        <div className="flex pr-64  flex-row-reverse relative sm:pt-10 pl-72">
+        <div className="flex  flex-row-reverse relative sm:pt-10 pr-32">
             <Button projects={projectsArray[0]} elem="6" companyButtons={compButtonsArray[5]} title="Лаборатория кибербезопасности ГУАП-Infowatch"/>
         </div>
         <div className="flex pr-32 pt-20 flex-row-reverse relative sm: pr-28">
