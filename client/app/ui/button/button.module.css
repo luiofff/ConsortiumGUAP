@@ -6,7 +6,8 @@
     width: fit-content;
     transition: 0.3s;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 49;
+
 }
 
 .close {
@@ -136,6 +137,7 @@
     font-size: .6rem;
     
     transition: .5s;
+    z-index: 49;
   }
 
 @media screen and (max-width:860px) {
@@ -161,8 +163,10 @@
   background: rgba(255, 255, 255, 0.75);
 }
 
-.full_btn_image {
-  height: 2rem;
-  width: 2rem;
-  background-color: red;
+@media screen and (max-width:425px) {
+  .full_btn {
+    width: 18rem;
+    height: 18rem;
+    border: 3px solid rgba(255, 255, 255, 0.90);
+  }
 }

@@ -4,7 +4,6 @@ import styles from "./navbar.module.css"
 import Image from 'next/image'
 import logo from '../../../public/logo.svg'
 import {DropdownMenu, Button, Icon} from '@gravity-ui/uikit';
-import burger from "../../../public/burger.svg"
 
 const links = [
     { name: 'О школе', href: '/dashboard'},
@@ -46,7 +45,7 @@ export default function Navbar() {
                         <DropdownMenu
                             renderSwitcher={(props) => (
                                 <Button {...props} view="flat">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"  viewBox="0 0 26 24" fill="none">
                                         <rect width="26" height="3" rx="1.5" fill="white"/>
                                         <rect y="9" width="26" height="3" rx="1.5" fill="white"/>
                                         <rect y="18" width="26" height="3" rx="1.5" fill="white"/>
