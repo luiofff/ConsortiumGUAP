@@ -53,7 +53,7 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                     (   
                         <div id={elem} className="grid place-items-center z-50">
                             <div ref={fullBtnRef}  className={styles.full_btn}>
-                                <div className="flex flex-col gap-6 justify-center items-center mobile: gap-2">
+                                <div className="flex flex-col gap-6 justify-center items-center mobile: gap-2 ">
                                     <span style={{ color:"#fff"}} className="flex justify-center text-center w-24 mobile: text-xs">{title}</span>
                                     <span style={{ color:"#fff" }} className="modile: text-xs">Партнеры</span>
                                     <div  className="flex gap-4 justify-center">
