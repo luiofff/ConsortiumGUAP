@@ -44,7 +44,7 @@ export default function Navbar() {
                     <div className={styles.mobile_menu}>
                         <DropdownMenu
                             renderSwitcher={(props) => (
-                                <Button {...props} view="flat">
+                                <Button {...props} view="flat" style={{ zIndex:999 }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"  viewBox="0 0 26 24" fill="none">
                                         <rect width="26" height="3" rx="1.5" fill="white"/>
                                         <rect y="9" width="26" height="3" rx="1.5" fill="white"/>
