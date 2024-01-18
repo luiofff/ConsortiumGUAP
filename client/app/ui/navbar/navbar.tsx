@@ -68,9 +68,9 @@ export default function Navbar() {
                         })}
                     </div>
                     <div className={styles.mobile_menu}>
-                        <button className={styles.hamburger} onClick={() => (toggle ? setToggle(false) : setToggle(true))}>
-                                    <input className={styles.checkbox} type="checkbox" id='checker'/>
-                                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                        <button className={styles.hamburger} >
+                                    <input className={styles.checkbox} type="checkbox" id='checker' onClick={() => (toggle ? setToggle(false) : setToggle(true))}/>
+                                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50" >
                                     <path
                                         className={`${styles.lineTop} ${styles.line}`}
                                         stroke-linecap="round"
