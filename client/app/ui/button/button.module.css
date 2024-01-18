@@ -121,6 +121,8 @@
     gap: 2rem;
 
     position: relative;
+
+    background-color: red;
   }
 
   .btn_block:is(:hover, :active, :focus) .btn__title {
