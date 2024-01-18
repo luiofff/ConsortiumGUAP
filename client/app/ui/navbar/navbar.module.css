@@ -70,7 +70,10 @@
     transform-origin: left;
     transform: rotateZ(-45deg) translate(-5px, 5px);
   }
-  
+
+  .nav_menu {
+    display: none;
+  }
 
 @media screen and (max-width:1024px) {
     .mobile_menu {
@@ -79,4 +82,116 @@
     .nav_textBlock {
         display: none;
     }
+
+    .nav_menu_close {
+      transition: .5s;
+      display: none;
+      transform: translateX(20rem);
+    }
+
+    .nav_menu_open {
+      transition: .5s;
+      display: none;
+      transform: translateX(0);
+    }
+
+    .nav_menu {
+      width: 100%;
+      
+      display: flex;
+      justify-content: end;
+    
+      z-index: 999;
+      position: fixed;
+    }
+    
+    .nav_menu_ {
+      height: 25rem;
+      
+      justify-content: center;
+    
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .nav_mobile_btn {
+      width: 200px;
+      height: 56px;
+      overflow: hidden;
+      border: none;
+      color: #fff;
+      background: none;
+      position: relative;
+      padding-bottom: 2em;
+      cursor: pointer;
+    }
+    
+    .nav_mobile_btn > .text,
+    .nav_mobile_btn > .clone {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    
+    .nav_mobile_btn:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      background: currentColor;
+      transition: transform 0.25s ease-out;
+    }
+    
+    .nav_mobile_btn:hover:before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    
+    .nav_mobile_btn .clone > *,
+    .nav_mobile_btn .text > * {
+      opacity: 1;
+      font-size: 1.3rem;
+      transition: 0.2s;
+      margin-left: 4px;
+    }
+    
+    .nav_mobile_btn .clone > * {
+      transform: translateY(60px);
+    }
+    
+    .nav_mobile_btn:hover .clone > * {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+    
+    .nav_mobile_btn:hover .text > * {
+      opacity: 1;
+      transform: translateY(-60px);
+      transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+    
+    .nav_mobile_btn:hover .clone > :nth-child(1) {
+      transition-delay: 0.15s;
+    }
+    
+    .nav_mobile_btn:hover .clone > :nth-child(2) {
+      transition-delay: 0.2s;
+    }
+    
+    .nav_mobile_btn:hover .clone > :nth-child(3) {
+      transition-delay: 0.25s;
+    }
+    
+    .nav_mobile_btn:hover .clone > :nth-child(4) {
+      transition-delay: 0.3s;
+    }
+    
+    
 }
+
