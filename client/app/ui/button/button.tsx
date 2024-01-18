@@ -69,15 +69,24 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                                     {
                                         projects.map((project, index) => (
                                             <div key={index} className="flex gap-4 w-48 justify-center">
-                                                <div style={{ fontSize: "0.4rem", border: "2px solid #F92D77", display:"grid", placeItems:"center" }} className="p-9  rounded-full border-2 mobile:p-6">
-                                                    <span className="absolute text-center grid place-items-center w-14">{project.left}</span>
+                                                <div style={{ fontSize: "0.4rem", border: "2px solid #F92D77" }} className="w-14 h-14 rounded-full grid place-items-center">
+                                                    <span className="w-full text-center">{project.left}</span>
                                                 </div>
-                                                <div style={{ fontSize: "0.4rem", border: "2px solid #1546FA", display:"grid", placeItems:"center" }} className="p-9  rounded-full border-2 mobile:p-6">
-                                                    <span className="absolute text-center grid place-items-center w-14">{project.center}</span>
+                                                <div style={{ fontSize: "0.4rem", border: "2px solid #1546FA" }} className="w-14 h-14 rounded-full grid place-items-center">
+                                                    <span className="w-full text-center">{project.center}</span>
                                                 </div>
-                                                <div style={{ fontSize: "0.4rem", border: "2px solid #15C1EC", display:"grid", placeItems:"center" }} className="p-9  rounded-full border-2 mobile:p-6">
-                                                    <span className="absolute text-center grid place-items-center w-14">{project.rigth}</span>
+                                                <div style={{ fontSize: "0.4rem", border: "2px solid #15C1EC"}} className="w-14 h-14 rounded-full grid place-items-center">
+                                                    <span className="w-full text-center">{project.rigth}</span>
                                                 </div>
+                                                {/* <div style={{ fontSize: "0.4rem", border: "2px solid #F92D77", display:"grid", placeItems:"center" }} className="w-20 h-20  rounded-full border-2 mobile:p-6">
+                                                    <span className="grid place-items-center w-14">{project.left}</span>
+                                                </div>
+                                                <div style={{ fontSize: "0.4rem", border: "2px solid #1546FA", display:"grid", placeItems:"center" }} className="w-20 h-20  rounded-full border-2 mobile:p-6">
+                                                    <span className="grid place-items-center w-14">{project.center}</span>
+                                                </div>
+                                                <div style={{ fontSize: "0.4rem", border: "2px solid #15C1EC", display:"grid", placeItems:"center" }} className="w-20 h-20  rounded-full border-2 mobile:p-6">
+                                                    <span className="grid place-items-center w-14">{project.rigth}</span>
+                                                </div> */}
                                             </div>
                                         ))
                                     }
