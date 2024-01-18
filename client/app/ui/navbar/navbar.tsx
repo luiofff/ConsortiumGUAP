@@ -3,7 +3,6 @@
 import styles from "./navbar.module.css"
 import Image from 'next/image'
 import logo from '../../../public/logo.svg'
-import {DropdownMenu} from '@gravity-ui/uikit';
 import React from "react";
 
 const links = [
@@ -17,13 +16,34 @@ const links = [
 
 export default function Navbar() {
 
-    const [toggle, setToggle] = React.useState(false)
+    const [toggle, setToggle] = React.useState(false);
 
+    React.useEffect(() => {
+        const handleScroll = () => {
+          const navbar = document.getElementById('navbar');
+          if (navbar) {
+            const scrollY = window.scrollY || window.pageYOffset;
     
+            if (scrollY >= 60) {
+              navbar.classList.add('bg-[#0C2A92]');
+              
+            } else {
+              navbar.classList.remove('bg-[#0C2A92]');
+              
+            }
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
     return (
         <>
-           <div className={styles.nav}>
+           <div id="navbar"  className={`${styles.nav}`}>
                 <div className={styles.logo_block}>
                         <Image
                             className={styles.logo}
@@ -55,7 +75,7 @@ export default function Navbar() {
                                         className={`${styles.lineTop} ${styles.line}`}
                                         stroke-linecap="round"
                                         stroke-width="1"
-                                        stroke="whit"
+                                        stroke="white"
                                         d="M6 11L44 11"
                                     ></path>
                                     <path
@@ -77,10 +97,8 @@ export default function Navbar() {
                         
                     </div>
                     
-                    
-           </div>
-            <div className={`${styles.nav_menu}  ${toggle ? styles.nav_menu_open : styles.nav_menu_close} `}>
-                <div style={{ boxShadow: "-6px 2px 15.8px 6px #1546FA" }} className="absolute h-full w-[320px] bg-[black] opacity-85">
+                    <div className={`${styles.nav_menu}  ${toggle ? styles.nav_menu_open : styles.nav_menu_close} `}>
+                <div style={{ boxShadow: "-3px 16px 18.5px 6px #1546FA" }} className="absolute h-full w-[320px] bg-[#0C2A92] opacity-85">
                 </div>
                 <div className={styles.nav_menu_}>
                     <button className={styles.nav_mobile_btn}>
@@ -136,7 +154,9 @@ export default function Navbar() {
                         </div>
                     </button>
                 </div>
-            </div>
+            </div>    
+           </div>
+        
         </>
     );
 }
