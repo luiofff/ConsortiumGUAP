@@ -51,7 +51,7 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                 {
                     clicked ? 
                     (   
-                        <div id={elem} className="grid place-items-center z-50">
+                        <div id={elem} className="absolute grid place-items-center z-50">
                             <div ref={fullBtnRef}  className={styles.full_btn}>
                                 <div className="flex flex-col gap-6 justify-center items-center mobile:gap-2 ">
                                     <span style={{ color:"#fff"}} className="flex justify-center text-center w-24 mobile:text-xs">{title}</span>
@@ -123,8 +123,10 @@ export default function Button({ companyButtons, title, elem, projects }: Button
 
                 
             </div>   */}
+            { clicked ?
             
-            <div className={styles.btn_block}>
+            
+            (<div className={styles.btn_block}>
                 <div id={elem} className="absolute grid place-items-center z-50">
                             <div ref={fullBtnRef}  className={styles.full_btn}>
                                 <div className="flex flex-col gap-6 justify-center items-center mobile:gap-2 ">
@@ -159,7 +161,40 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                                 </div>
                             </div>
                         </div>
-            </div>
+            </div>)
+            :
+            (<div className={styles.btn_block}>
+                        <div id={elem} className={`${styles.buttons} ${!clicked ? "grid" : "hidden"}`}>
+                            <button className={styles['main-button']} onClick={handleClick}>
+                                <Image
+                                    className={styles.button_logo}
+                                    src={require("../../../public/button_logo.svg")}
+                                    alt="IS_logo"
+                                    width={50}
+                                    height={50}
+                                    priority
+                                />
+                            </button>
+        
+                            {
+                                companyButtons.map((button, index) => (
+                                        <button
+                                            key={index}
+                                            className={clsx(styles[`${button.countBtn}`], styles.button)}
+                                            style={{ transitionDelay: `${button.transitionDelay}, ${button.transitionDelay}, ${button.transitionDelay}`, transitionProperty: 'translate, background, box-shadow' }}
+                                            >
+                                            <div className={styles.company_logo}>
+                                                <CompanyLogo company={button.icon} />
+                                            </div>
+                                        </button>
+                                    )  
+                                )
+                            }
+                        </div>
+                        <div className={styles.text_block}>
+                            <span className={clsx(styles.btn__title, clicked && styles.close)}>{title}</span>
+                        </div>
+            </div>)}
         </>
     );
 }

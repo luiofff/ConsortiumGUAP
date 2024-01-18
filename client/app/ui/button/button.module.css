@@ -122,7 +122,6 @@
 
     position: relative;
 
-    background-color: red;
   }
 
   .btn_block:is(:hover, :active, :focus) .btn__title {
@@ -135,8 +134,8 @@
     font-weight: 300;
     height: 3rem;
 
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 
     line-height: 20px;
 
