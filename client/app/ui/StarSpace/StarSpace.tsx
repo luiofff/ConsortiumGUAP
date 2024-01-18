@@ -74,53 +74,48 @@ const Planet = () => {
     )
 }
 
-export default function StarSpace () {
+export default function StarSpace() {
     const numberOfStars = 14;
-    const numberOfShips = 3;   
-
-    const getRandomPosition = () => ( 
-    {
-        top: Math.random() * 1580,
-        left: Math.random() * window.innerWidth - 50 
-    });
-
+    const numberOfShips = 3;
+  
     const stars = Array.from({ length: numberOfStars }).map((_, index) => (
-        (typeof window !== 'undefined') ?
-        <div key={index} className="absolute" style={getRandomPosition()}>
-            <Star />
-        </div>
-        :
-        (<></>)
+      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * window.innerWidth - 50 }}>
+        <Star />
+      </div>
     ));
-
+  
     const glares = Array.from({ length: numberOfStars }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Glare /></div>
+      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * (typeof window !== 'undefined' ? window.innerWidth - 50 : 0) }}>
+        <Glare />
+      </div>
     ));
-
+  
     const ships = Array.from({ length: numberOfShips }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><SpaceShip /></div>
+      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * (typeof window !== 'undefined' ? window.innerWidth - 50 : 0) }}>
+        <SpaceShip />
+      </div>
     ));
-
+  
     const sputnik = Array.from({ length: 2 }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Sputnik /></div>
+      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * (typeof window !== 'undefined' ? window.innerWidth - 50 : 0) }}>
+        <Sputnik />
+      </div>
     ));
-
+  
     const planet = Array.from({ length: 2 }).map((_, index) => (
-        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Planet /></div>
+      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * (typeof window !== 'undefined' ? window.innerWidth - 50 : 0) }}>
+        <Planet />
+      </div>
     ));
-    
-   
-
-
-
-
+  
     return (
-        <div className="absolute pt-60 w-full h-full z-0">
-            {stars}
-            {glares}
-            {ships}
-            {sputnik}
-            {planet}
-        </div>
+      <div className="absolute pt-60 w-full h-full z-0">
+        {stars}
+        {glares}
+        {ships}
+        {sputnik}
+        {planet}
+      </div>
     );
-}
+  }
+  
