@@ -37,7 +37,7 @@ module.exports = {
 
       'sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
-      'modbile': {'max': '425px'}
+      'mobile': {'max': '425px'}
     }
   },
   plugins: [],

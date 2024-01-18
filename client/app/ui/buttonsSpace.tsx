@@ -141,13 +141,13 @@ export default function ButtonsSpace() {
     return (
         <>
             <div className="flex flex-col pt-20 "> 
-                <div className="flex pl-32 md:pl-46 sm:pl-20 ">
+                <div className="flex mobile:justify-center mobile:p-0 md:pl-46 sm:pl-20 ">
                     <Button projects={projectsArray[0]} elem="1"companyButtons={compButtonsArray[0]} title="Лаборатория технологического предпринимательства"/>
                 </div>
-                <div className="flex pr-32 flex-row-reverse relative sm:pr-20 ">
+                <div className="flex mobile:justify-center mobile:p-0 mobile:justify-center mobile:p-0 flex-row-reverse relative sm:pr-20 ">
                     <Button projects={projectsArray[0]}  elem="2" companyButtons={compButtonsArray[1]} title="Лаборатория интернета вещей"/>
                 </div>
-                <div className="flex pl-96 sm:pl-20">
+                <div className="flex mobile:justify-center mobile:p-0  sm:pl-20">
                     <Button projects={projectsArray[0]} elem="3" companyButtons={compButtonsArray[2]} title="Лаборатория робототехники"/>
                 </div>
                 <div className="flex pr-36 pt-16  flex-row-reverse relative sm:pr-20">

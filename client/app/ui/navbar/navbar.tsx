@@ -3,7 +3,7 @@
 import styles from "./navbar.module.css"
 import Image from 'next/image'
 import logo from '../../../public/logo.svg'
-import {DropdownMenu, Button, Icon} from '@gravity-ui/uikit';
+import {DropdownMenu} from '@gravity-ui/uikit';
 
 const links = [
     { name: 'О школе', href: '/dashboard'},
@@ -15,6 +15,14 @@ const links = [
   ];
 
 export default function Navbar() {
+
+    const delCheck = () => {
+        const elem = document.getElementById("checker") as HTMLInputElement;
+        if (elem) {
+            elem.checked = false;
+        }
+    }
+
     return (
         <>
            <div className={styles.nav}>
@@ -46,7 +54,7 @@ export default function Navbar() {
                             renderSwitcher={(props) => (
                                 
                                 <button className={styles.hamburger} {...props}>
-                                    <input className={styles.checkbox} type="checkbox" />
+                                    <input className={styles.checkbox} type="checkbox" id='checker'/>
                                     <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
                                     <path
                                         className={`${styles.lineTop} ${styles.line}`}
