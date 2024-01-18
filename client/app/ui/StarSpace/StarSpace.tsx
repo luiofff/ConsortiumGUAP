@@ -77,11 +77,20 @@ const Planet = () => {
 export default function StarSpace() {
     const numberOfStars = 14;
     const numberOfShips = 3;
+
+    const getRandomPosition = () => ( 
+        {
+            top: Math.random() * 1580,
+            left: Math.random() * window.innerWidth - 50 
+    });
   
     const stars = Array.from({ length: numberOfStars }).map((_, index) => (
-      <div key={index} className="absolute" style={{ top: Math.random() * 2000, left: Math.random() * window.innerWidth - 50 }}>
-        <Star />
-      </div>
+        (typeof window !== 'undefined') ?
+        <div key={index} className="absolute" style={getRandomPosition()}>
+            <Star />
+        </div>
+        :
+        (<></>)
     ));
   
     const glares = Array.from({ length: numberOfStars }).map((_, index) => (
