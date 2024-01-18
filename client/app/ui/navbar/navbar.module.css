@@ -86,7 +86,7 @@
     .nav_menu_close {
       transition: .5s;
       display: none;
-      transform: translateX(20rem);
+      transform: translateX(100rem);
     }
 
     .nav_menu_open {
