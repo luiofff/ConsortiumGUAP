@@ -88,7 +88,7 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                     )
                     :
                     (
-                        <div id={elem} className={`${styles.buttons} ${ !clicked ? 'grid' : styles.closeButton}`}>
+                        <div id={elem} className={`${styles.buttons} ${!clicked ? "grid" : "hidden"}`}>
                             <button className={styles['main-button']} onClick={handleClick}>
                                 <Image
                                     className={styles.button_logo}
