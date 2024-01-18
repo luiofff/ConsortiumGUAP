@@ -179,6 +179,10 @@ const StarSpace = () => {
         <div key={index} className="absolute" style={{ top: Math.random() * 1580, left: typeof window !== 'undefined' ? Math.random() * window.innerWidth - 50 : 0 }}><Planet /></div>
     ));
 
+    const plane = Array.from({ length: 2 }).map((_, index) => (
+        <div key={index} className="absolute" style={{ top: Math.random() * 1580, left:  Math.random() * window.innerWidth - 50  }}><Planet /></div>
+    ));
+
     
 
    
@@ -192,6 +196,7 @@ const StarSpace = () => {
             {ships}
             {sputnik}
             {glares}
+            {planets}
         </div>
     );
 };
