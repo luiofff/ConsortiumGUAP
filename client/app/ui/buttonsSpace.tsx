@@ -4,6 +4,8 @@ import Button from "./button/button";
 
 import React, { useEffect, useRef } from 'react';
 
+import StarSpace from "./StarSpace/StarSpace";
+
 const projectsArray = [
     [
         {left: "Мобильное приложение", center: "Голосовой помощник", rigth: "Телеграмм-бот"}
@@ -172,6 +174,7 @@ export default function ButtonsSpace() {
                 <div className="flex pr-20 pb-10 justify-center relative sm:pt-16 pl-16">
                     <Button projects={projectsArray[0]} elem="11" companyButtons={compButtonsArray[10]} title="Лаборатория технологического предпринимательства"/>
                 </div>
+                <StarSpace />
                 {renderLines()}
             </div>
         </>

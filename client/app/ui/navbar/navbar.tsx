@@ -44,13 +44,33 @@ export default function Navbar() {
                     <div className={styles.mobile_menu}>
                         <DropdownMenu
                             renderSwitcher={(props) => (
-                                <Button {...props} view="flat" style={{ zIndex:999 }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24"  viewBox="0 0 26 24" fill="none">
-                                        <rect width="26" height="3" rx="1.5" fill="white"/>
-                                        <rect y="9" width="26" height="3" rx="1.5" fill="white"/>
-                                        <rect y="18" width="26" height="3" rx="1.5" fill="white"/>
+                                
+                                <button className={styles.hamburger} {...props}>
+                                    <input className={styles.checkbox} type="checkbox" />
+                                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                                    <path
+                                        className={`${styles.lineTop} ${styles.line}`}
+                                        stroke-linecap="round"
+                                        stroke-width="1"
+                                        stroke="whit"
+                                        d="M6 11L44 11"
+                                    ></path>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        stroke="white"
+                                        d="M6 24H43"
+                                        className={`${styles.lineMid} ${styles.line}`}
+                                    ></path>
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-width="2"
+                                        stroke="white"
+                                        d="M6 37H43"
+                                        className={`${styles.lineBottom} ${styles.line}`}
+                                    ></path>
                                     </svg>
-                                </Button>
+                                </button>
                             )}
                             items={[
                                 {
