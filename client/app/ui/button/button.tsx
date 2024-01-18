@@ -53,9 +53,9 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                     (   
                         <div id={elem} className="grid place-items-center z-50">
                             <div ref={fullBtnRef}  className={styles.full_btn}>
-                                <div className="flex flex-col gap-6 justify-center items-center mobile: gap-2 ">
-                                    <span style={{ color:"#fff"}} className="flex justify-center text-center w-24 mobile: text-xs">{title}</span>
-                                    <span style={{ color:"#fff" }} className="modile: text-xs">Партнеры</span>
+                                <div className="flex flex-col gap-6 justify-center items-center mobile:gap-2 ">
+                                    <span style={{ color:"#fff"}} className="flex justify-center text-center w-24 mobile:text-xs">{title}</span>
+                                    <span style={{ color:"#fff" }} className="modile:text-xs">Партнеры</span>
                                     <div  className="flex gap-4 justify-center">
                                         {
                                             companyButtons.map((button, index) => (
@@ -68,14 +68,14 @@ export default function Button({ companyButtons, title, elem, projects }: Button
                                     {
                                         projects.map((project, index) => (
                                             <div key={index} className="flex gap-4 w-48 justify-center">
-                                            <div style={{ fontSize: "0.5rem", border: "2px solid #F92D77" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile: p-7">
-                                                <span className="absolute text-center grid place-items-center w-20">{project.left}</span>
+                                            <div style={{ fontSize: "0.4rem", border: "2px solid #F92D77" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile:p-6">
+                                                <span className="absolute text-center grid place-items-center w-14">{project.left}</span>
                                             </div>
-                                            <div style={{ fontSize: "0.5rem", border: "2px solid #1546FA" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile: p-7">
-                                                <span className="absolute text-center grid place-items-center w-20">{project.center}</span>
+                                            <div style={{ fontSize: "0.4rem", border: "2px solid #1546FA" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile:p-6">
+                                                <span className="absolute text-center grid place-items-center w-14">{project.center}</span>
                                             </div>
-                                            <div style={{ fontSize: "0.5rem", border: "2px solid #15C1EC" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile: p-7">
-                                                <span className="absolute text-center grid place-items-center w-20">{project.rigth}</span>
+                                            <div style={{ fontSize: "0.4rem", border: "2px solid #15C1EC" }} className="p-9 text-center grid place-items-center rounded-full border-2 mobile:p-6">
+                                                <span className="absolute text-center grid place-items-center w-14">{project.rigth}</span>
                                             </div>
                                             </div>
                                         ))
