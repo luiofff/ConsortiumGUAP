@@ -6,7 +6,7 @@
     -webkit-overflow-scrolling: touch;
     scroll-padding: 1rem;
     background-color: transparent;
-
+    transition: .5s;
 }
 
 .slider__item {
@@ -19,6 +19,7 @@
     scroll-snap-align: start;
     font-size: 1.5rem;
     background-color: transparent;
+    transition: .5s;
 }
 
 .slider__block::-webkit-scrollbar {
