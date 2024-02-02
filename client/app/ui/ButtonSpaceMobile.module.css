@@ -3,6 +3,7 @@
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
+    transition: .5s;
 }
 
 .touch__section {
@@ -13,6 +14,7 @@
     font-size: 2rem;
     padding-top: 6rem;
     scroll-snap-align: start;
+    transition: .5s;
 }
 
 .main::-webkit-scrollbar {
