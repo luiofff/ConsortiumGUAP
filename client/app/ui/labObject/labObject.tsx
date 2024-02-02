@@ -32,7 +32,7 @@ export default function LabObject({ companyButtons, title }: ButtonProps) {
     return (
         <>
             <div className="w-full flex justify-between flex-col items-center gap-4">
-                <div style={{ border: "1px solid #fff", background: "transparent", height:"34vh", boxShadow: "2px 2px 13px 2px #fff" }} className="w-11/12 h-full rounded-3xl p-6 flex flex-col justify-between">
+                <div style={{ border: "1px solid #fff", background: "transparent", height:"29vh", boxShadow: "2px 2px 13px 2px #fff" }} className="w-11/12 h-full rounded-3xl p-6 flex flex-col justify-between">
                     <div className="w-full">
                         <div style={{ fontSize: "25px"}} className="w-36 font-bold text-white">{title}</div>
                     </div>

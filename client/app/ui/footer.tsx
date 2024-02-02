@@ -5,7 +5,7 @@ import logo from "../../public/logo.svg"
 export default function Footer() {
     return (
         <>
-            <div className="flex w-full h-28 items-center pl-28 pr-28 sm:justify-center">
+            <div className="flex w-full h-28 items-center pl-28 pr-28 sm:justify-center sm:hidden">
                 <Image
                     src={logo}
                     alt="Logo"
