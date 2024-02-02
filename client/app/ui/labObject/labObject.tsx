@@ -41,7 +41,7 @@ export default function LabObject({ companyButtons, title }: ButtonProps) {
                         <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18"><path fill="white" d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></div>
                     </div>
                 </div>
-                <div style={{ border: "1px solid #fff", height:"21vh", boxShadow: "2px 2px 13px 2px #fff" }} className="w-11/12 h-full bg-[#F7F7F7] rounded-3xl p-6 flex flex-col justify-between">
+                <div style={{ border: "1px solid #fff", height:"20vh", boxShadow: "2px 2px 13px 2px #fff" }} className="w-11/12 h-full bg-[#F7F7F7] rounded-3xl p-6 flex flex-col justify-between">
                     <div className={style.slider__block}>
                         {companies.map((company, index) => (
                             <div
@@ -67,7 +67,7 @@ export default function LabObject({ companyButtons, title }: ButtonProps) {
                         </div>
                     </div>
                 </div>
-                <div style={{ border: "1px solid #1447FB", background: "#1447FB", height:"21vh", boxShadow: "2px 2px 13px 2px #1447FB" }} className="w-11/12 h-full bg-[green] rounded-3xl p-6 flex flex-col justify-between">
+                <div style={{ border: "1px solid #1447FB", background: "#1447FB", height:"20vh", boxShadow: "2px 2px 13px 2px #1447FB" }} className="w-11/12 h-full bg-[green] rounded-3xl p-6 flex flex-col justify-between">
                     <div className="w-full flex justify-end">
                         <div style={{ fontSize: "15px"}} className="font-bold text-white">Проекты</div>
                     </div>
