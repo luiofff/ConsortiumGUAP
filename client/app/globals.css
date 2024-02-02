@@ -79,3 +79,22 @@ body {
 	background-size: cover !important;
 	background: linear-gradient(72deg, #000 -72.29%, #000 18.51%, #1447FB 113.17%);
 }
+
+
+.buttonsSpaceDesktop {
+	display: block;
+}
+
+.buttonsSpaceMobile {
+	display: none;
+}
+
+@media screen and (max-width:800px) {
+	.buttonsSpaceDesktop {
+		display: none;
+	}
+	
+	.buttonsSpaceMobile {
+		display: block;
+	}
+}
