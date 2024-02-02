@@ -18,28 +18,7 @@ export default function Navbar() {
 
     const [toggle, setToggle] = React.useState(false);
 
-    React.useEffect(() => {
-        const handleScroll = () => {
-          const navbar = document.getElementById('navbar');
-          if (navbar) {
-            const scrollY = window.scrollY || window.pageYOffset;
-    
-            if (scrollY >= 60) {
-              navbar.classList.add('bg-[#0C2A92]');
-              
-            } else {
-              navbar.classList.remove('bg-[#0C2A92]');
-              
-            }
-          }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+   
 
     return (
         <>
@@ -98,7 +77,7 @@ export default function Navbar() {
                     </div>
                     
                     <div className={`${styles.nav_menu}  ${toggle ? styles.nav_menu_open : styles.nav_menu_close} `}>
-                <div style={{ boxShadow: "-3px 16px 18.5px 6px #1546FA" }} className="absolute h-full w-[320px] bg-[#0C2A92] opacity-85">
+                <div style={{ boxShadow: "-3px 16px 18.5px 6px #1546FA" }} className="absolute h-full w-[320px] bg-[#1546FA] opacity-85">
                 </div>
                 <div className={styles.nav_menu_}>
                     <div className="flex flex-col">
