@@ -16,6 +16,7 @@ export default function Home() {
     <>
       <Navbar />
       <section className='buttonsSpaceDesktop'>
+        <TitleBlock />
         <ButtonsSpace />
         <Footer />
       </section>
